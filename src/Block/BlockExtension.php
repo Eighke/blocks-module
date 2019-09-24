@@ -69,10 +69,10 @@ class BlockExtension extends Extension
      */
     public function extend(BlockInstanceFormBuilder $builder)
     {
-        $this->dispatch(new AddStreamForm($builder, $this));
-        $this->dispatch(new AddConfigurationForm($builder, $this));
+        dispatch_now(new AddStreamForm($builder, $this));
+        dispatch_now(new AddConfigurationForm($builder, $this));
 
-        $this->dispatch(new ExtendFormSections($builder, $this));
+        dispatch_now(new ExtendFormSections($builder, $this));
     }
 
     /**
@@ -93,13 +93,26 @@ class BlockExtension extends Extension
     }
 
     /**
-     * Get the block.
+     * Get the model.
      *
-     * @return null|BlockInterface
+     * @return null|string
      */
-    public function getBlock()
+    public function getModel()
     {
-        return $this->block;
+        return $this->model;
+    }
+
+    /**
+     * Set the model.
+     *
+     * @param $model
+     * @return $this
+     */
+    public function setModel($model)
+    {
+        $this->model = $model;
+
+        return $this;
     }
 
     /**
@@ -114,6 +127,16 @@ class BlockExtension extends Extension
         }
 
         return $block->getEntryId();
+    }
+
+    /**
+     * Get the block.
+     *
+     * @return null|BlockInterface
+     */
+    public function getBlock()
+    {
+        return $this->block;
     }
 
     /**
@@ -137,29 +160,6 @@ class BlockExtension extends Extension
     public function unsetBlock()
     {
         $this->block = null;
-
-        return $this;
-    }
-
-    /**
-     * Get the model.
-     *
-     * @return null|string
-     */
-    public function getModel()
-    {
-        return $this->model;
-    }
-
-    /**
-     * Set the model.
-     *
-     * @param $model
-     * @return $this
-     */
-    public function setModel($model)
-    {
-        $this->model = $model;
 
         return $this;
     }
@@ -255,5 +255,4 @@ class BlockExtension extends Extension
 
         return $this;
     }
-
 }

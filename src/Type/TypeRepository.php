@@ -1,7 +1,7 @@
 <?php namespace Anomaly\BlocksModule\Type;
 
-use Anomaly\BlocksModule\Type\Contract\TypeRepositoryInterface;
 use Anomaly\BlocksModule\Type\Contract\TypeInterface;
+use Anomaly\BlocksModule\Type\Contract\TypeRepositoryInterface;
 use Anomaly\Streams\Platform\Entry\EntryRepository;
 
 /**

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'areas' => [
+    'areas'  => [
         'read',
         'write',
         'delete',

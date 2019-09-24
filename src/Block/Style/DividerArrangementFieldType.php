@@ -12,7 +12,6 @@ use Anomaly\SelectFieldType\SelectFieldType;
  */
 class DividerArrangementFieldType extends SelectFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -52,5 +51,4 @@ class DividerArrangementFieldType extends SelectFieldType
 
         return $config;
     }
-
 }

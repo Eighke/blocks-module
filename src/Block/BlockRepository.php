@@ -50,7 +50,7 @@ class BlockRepository extends EntryRepository implements BlockRepositoryInterfac
      *
      * @param EntryInterface $area
      * @param FieldInterface $field
-     * @param array          $ids
+     * @param array $ids
      */
     public function sync(EntryInterface $area, FieldInterface $field, array $ids)
     {

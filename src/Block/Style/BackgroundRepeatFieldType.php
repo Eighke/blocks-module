@@ -12,7 +12,6 @@ use Anomaly\SelectFieldType\SelectFieldType;
  */
 class BackgroundRepeatFieldType extends SelectFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -56,5 +55,4 @@ class BackgroundRepeatFieldType extends SelectFieldType
 
         return $config;
     }
-
 }

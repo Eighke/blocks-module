@@ -12,7 +12,6 @@ use Anomaly\TextFieldType\TextFieldType;
  */
 class BorderWidthFieldType extends TextFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -81,5 +80,4 @@ class BorderWidthFieldType extends TextFieldType
             ],
         ];
     }
-
 }

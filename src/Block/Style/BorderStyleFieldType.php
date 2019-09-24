@@ -12,7 +12,6 @@ use Anomaly\SelectFieldType\SelectFieldType;
  */
 class BorderStyleFieldType extends SelectFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -60,5 +59,4 @@ class BorderStyleFieldType extends SelectFieldType
 
         return $config;
     }
-
 }

@@ -72,7 +72,7 @@ class BlockModel extends BlocksBlocksEntryModel implements BlockInterface
     {
         $this->make();
 
-        return $this->dispatch(new RenderBlock($this, $payload));
+        return dispatch_now(new RenderBlock($this, $payload));
     }
 
     /**
@@ -82,19 +82,9 @@ class BlockModel extends BlocksBlocksEntryModel implements BlockInterface
      */
     public function make()
     {
-        $this->dispatch(new MakeBlock($this));
+        dispatch_now(new MakeBlock($this));
 
         return $this;
-    }
-
-    /**
-     * Get the extension.
-     *
-     * @return BlockExtension
-     */
-    public function getExtension()
-    {
-        return $this->extension;
     }
 
     /**
@@ -107,6 +97,16 @@ class BlockModel extends BlocksBlocksEntryModel implements BlockInterface
         return $this
             ->getExtension()
             ->getSlug();
+    }
+
+    /**
+     * Get the extension.
+     *
+     * @return BlockExtension
+     */
+    public function getExtension()
+    {
+        return $this->extension;
     }
 
     /**
@@ -279,5 +279,4 @@ class BlockModel extends BlocksBlocksEntryModel implements BlockInterface
 
         return $this;
     }
-
 }

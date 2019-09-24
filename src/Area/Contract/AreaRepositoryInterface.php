@@ -19,5 +19,4 @@ interface AreaRepositoryInterface extends EntryRepositoryInterface
      * @return AreaInterface|null
      */
     public function findBySlug($slug);
-    
 }

@@ -31,7 +31,7 @@ class BlocksController extends AdminController
     {
 
         /* @var AreaInterface $area */
-        if (!$area = $this->dispatch(new GetArea($area))) {
+        if (!$area = dispatch_now(new GetArea($area))) {
             abort(404);
         }
 
@@ -59,14 +59,14 @@ class BlocksController extends AdminController
     ) {
 
         /* @var BlockExtension $extension */
-        if (!$extension = $extensions->get($this->request->get('extension'))) {
+        if (!$extension = $extensions->get(request('extension'))) {
             abort(400, 'You must specify a block extension.');
         }
 
         $block->setExtension($extension);
 
         /* @var AreaInterface $area */
-        if (!$area = $this->dispatch(new GetArea($area))) {
+        if (!$area = dispatch_now(new GetArea($area))) {
             abort(404);
         }
 
@@ -112,7 +112,7 @@ class BlocksController extends AdminController
             ->enabled()
             ->sort();
 
-        return $this->view->make(
+        return view(
             'anomaly.module.blocks::admin/blocks/choose',
             [
                 'extensions' => $extensions->all(),

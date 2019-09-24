@@ -148,7 +148,7 @@ class BlocksFieldType extends FieldType
      */
     public function getInputValue($default = null)
     {
-        return $this->dispatch(new GetMultiformFromPost($this));
+        return dispatch_now(new GetMultiformFromPost($this));
     }
 
     /**
@@ -247,7 +247,7 @@ class BlocksFieldType extends FieldType
      */
     public function forms()
     {
-        if (!$forms = $this->dispatch(new GetMultiformFromValue($this))) {
+        if (!$forms = dispatch_now(new GetMultiformFromValue($this))) {
             return [];
         }
 
@@ -276,7 +276,6 @@ class BlocksFieldType extends FieldType
          * there isn't much we can do.
          */
         if (!$forms = $this->getInputValue()) {
-
             $entry->{$this->getField()} = null;
 
             return;
@@ -344,7 +343,6 @@ class BlocksFieldType extends FieldType
     {
         return $related->map(
             function (BlockModel $model) {
-
                 $array = array_diff_key(
                     $model->toArrayWithRelations(),
                     array_flip(
@@ -362,7 +360,8 @@ class BlocksFieldType extends FieldType
                             'pivot',
                             'area',
                         ]
-                    ));
+                    )
+                );
 
                 array_pull($array, 'entry.sort_order');
                 array_pull($array, 'entry.created_at');

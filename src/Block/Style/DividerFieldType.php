@@ -12,7 +12,6 @@ use Anomaly\SelectFieldType\SelectFieldType;
  */
 class DividerFieldType extends SelectFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -62,5 +61,4 @@ class DividerFieldType extends SelectFieldType
         'anomaly.module.blocks::img/dividers/waves.svg'       => 'anomaly.module.blocks::style.divider.option.waves',
         'anomaly.module.blocks::img/dividers/waves2.svg'      => 'anomaly.module.blocks::style.divider.option.waves2',
     ];
-
 }

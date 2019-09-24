@@ -1,7 +1,7 @@
 <?php namespace Anomaly\BlocksFieldType\Block;
 
 use Anomaly\Streams\Platform\Entry\EntryPresenter;
-use Anomaly\Streams\Platform\Support\Decorator;
+
 use Anomaly\Streams\Platform\Support\Presenter;
 
 /**
@@ -40,7 +40,7 @@ class BlocksPresenter extends Presenter
      */
     public function entry()
     {
-        return (new Decorator())->decorate($this->object->entry);
+        return decorate($this->object->entry);
     }
 
     /**
@@ -55,7 +55,7 @@ class BlocksPresenter extends Presenter
         $entry = $this->object->getEntry();
 
         if ($entry && $entry->hasField($key)) {
-            return (New Decorator())->decorate($entry)->{$key};
+            return decorate($entry)->{$key};
         }
 
         return parent::__get($key);

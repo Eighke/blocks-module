@@ -12,7 +12,6 @@ use Anomaly\SliderFieldType\SliderFieldType;
  */
 class WidthFieldType extends SliderFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -40,5 +39,4 @@ class WidthFieldType extends SliderFieldType
      * @var string
      */
     protected $label = 'anomaly.module.blocks::style.width.label';
-
 }

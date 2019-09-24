@@ -2,7 +2,7 @@
 
 use Anomaly\BlocksModule\Type\Contract\TypeInterface;
 use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
-use Illuminate\Contracts\Config\Repository;
+
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
@@ -15,7 +15,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class CreateStream
 {
 
-    use DispatchesJobs;
+
 
     /**
      * The block type instance.
@@ -44,7 +44,7 @@ class CreateStream
     {
         $streams->create(
             [
-                $config->get('app.fallback_locale') => [
+                config('app.fallback_locale') => [
                     'name'        => $this->type->getName(),
                     'description' => $this->type->getDescription(),
                 ],

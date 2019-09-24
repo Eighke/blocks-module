@@ -3,7 +3,7 @@
 use Anomaly\BlocksModule\Block\BlockExtension;
 use Anomaly\BlocksModule\Block\Form\BlockInstanceFormBuilder;
 use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
-use Illuminate\Contracts\Config\Repository;
+
 
 /**
  * Class ExtendFormSections
@@ -48,10 +48,9 @@ class ExtendFormSections
      */
     public function handle(Repository $config)
     {
-        $sections = $config->get($this->extension->getNamespace('sections'));
+        $sections = config($this->extension->getNamespace('sections'));
 
         if (!$sections) {
-
             $last = $this->builder
                 ->getForms()
                 ->last();
@@ -59,7 +58,6 @@ class ExtendFormSections
             $last->on(
                 'built',
                 function () {
-
                     $fields = ['block_title', 'block_display_title'];
 
                     /* @var FormBuilder $builder */
@@ -102,5 +100,4 @@ class ExtendFormSections
 
         $this->builder->prefixSectionFields($this->builder->getOption('prefix'));
     }
-
 }

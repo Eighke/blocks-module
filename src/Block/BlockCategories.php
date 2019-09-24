@@ -90,5 +90,4 @@ class BlockCategories
 
         return $this;
     }
-
 }

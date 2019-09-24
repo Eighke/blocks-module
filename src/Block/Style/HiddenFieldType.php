@@ -12,7 +12,6 @@ use Anomaly\CheckboxesFieldType\CheckboxesFieldType;
  */
 class HiddenFieldType extends CheckboxesFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -39,5 +38,4 @@ class HiddenFieldType extends CheckboxesFieldType
         'tablet'  => 'anomaly.module.blocks::style.disabled.option.tablet',
         'desktop' => 'anomaly.module.blocks::style.disabled.option.desktop',
     ];
-
 }

@@ -34,5 +34,4 @@ interface AreaInterface extends EntryInterface
      * @return MorphMany
      */
     public function blocks();
-
 }

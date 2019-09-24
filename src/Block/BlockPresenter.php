@@ -2,7 +2,7 @@
 
 use Anomaly\BlocksModule\Block\Contract\BlockInterface;
 use Anomaly\Streams\Platform\Entry\EntryPresenter;
-use Anomaly\Streams\Platform\Support\Decorator;
+
 
 /**
  * Class BlockPresenter
@@ -41,7 +41,7 @@ class BlockPresenter extends EntryPresenter
         $entry = $this->object->getEntry();
 
         if ($entry && $entry->hasField($key)) {
-            return (New Decorator())->decorate($entry)->{$key};
+            return decorate($entry)->{$key};
         }
 
         return $this->object->configuration($key);

@@ -101,5 +101,4 @@ class BlockTableBuilder extends TableBuilder
 
         return $this;
     }
-
 }

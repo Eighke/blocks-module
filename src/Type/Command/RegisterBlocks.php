@@ -38,7 +38,6 @@ class RegisterBlocks
          * @var TypeInterface $type
          */
         foreach ($types->all() as $type) {
-
             $extension = new BlockExtension();
 
             $extension
@@ -60,7 +59,6 @@ class RegisterBlocks
             $extension->on(
                 'extending',
                 function (MultipleFormBuilder $builder) use ($type) {
-
                     $builder->setOption('block_type', $type->getId());
 
                     /* @var BlockFormBuilder $block */

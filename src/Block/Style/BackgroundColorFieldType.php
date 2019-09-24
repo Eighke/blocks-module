@@ -12,7 +12,6 @@ use Anomaly\ColorpickerFieldType\ColorpickerFieldType;
  */
 class BackgroundColorFieldType extends ColorpickerFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -42,5 +41,4 @@ class BackgroundColorFieldType extends ColorpickerFieldType
 
         return $config;
     }
-
 }

@@ -56,7 +56,7 @@ class BlocksController extends PublicController
             }
         );
 
-        return $this->view->make(
+        return view(
             'anomaly.field_type.blocks::choose',
             [
                 'blocks' => $extensions->all(),
@@ -88,13 +88,13 @@ class BlocksController extends PublicController
         /* @var BlocksFieldType $type */
         $type = $field->getType();
 
-        $type->setPrefix($this->request->get('prefix'));
+        $type->setPrefix(request('prefix'));
 
         return $type
             ->form(
                 $field,
                 $extension,
-                $this->request->get('instance')
+                request('instance')
             )
             ->addFormData('field_type', $type)
             ->render();

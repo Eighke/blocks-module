@@ -12,7 +12,6 @@ use Anomaly\ColorpickerFieldType\ColorpickerFieldType;
  */
 class DividerColorFieldType extends ColorpickerFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -42,5 +41,4 @@ class DividerColorFieldType extends ColorpickerFieldType
 
         return $config;
     }
-
 }

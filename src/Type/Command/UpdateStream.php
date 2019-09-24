@@ -4,7 +4,7 @@ use Anomaly\BlocksModule\Type\Contract\TypeInterface;
 use Anomaly\BlocksModule\Type\Contract\TypeRepositoryInterface;
 use Anomaly\Streams\Platform\Stream\Contract\StreamInterface;
 use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
-use Illuminate\Contracts\Config\Repository;
+
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
@@ -17,7 +17,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class UpdateStream
 {
 
-    use DispatchesJobs;
+
 
     /**
      * The block type instance.
@@ -55,7 +55,7 @@ class UpdateStream
 
         $stream->fill(
             [
-                $config->get('app.fallback_locale') => [
+                config('app.fallback_locale') => [
                     'name'        => $this->type->getName(),
                     'description' => $this->type->getDescription(),
                 ],

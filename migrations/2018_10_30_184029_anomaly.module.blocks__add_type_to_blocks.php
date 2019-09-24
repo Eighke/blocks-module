@@ -54,5 +54,4 @@ class AnomalyModuleBlocksAddTypeToBlocks extends Migration
     protected $assignments = [
         'type',
     ];
-
 }

@@ -4,8 +4,8 @@ return [
     'related' => [
         'label'        => 'Blockss',
         'instructions' => 'Ange de relaterade <a href="' . url(
-                'admin/blockss'
-            ) . '" target="_blank">blockssen</a>.',
+            'admin/blockss'
+        ) . '" target="_blank">blockssen</a>.',
     ],
     'min'     => [
         'label'        => 'Minsta antal',

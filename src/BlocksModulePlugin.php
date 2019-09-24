@@ -27,12 +27,13 @@ class BlocksModulePlugin extends Plugin
                 function ($identifier) {
 
                     /* @var AreaInterface $area */
-                    if (!$area = $this->dispatch(new GetArea($identifier))) {
+                    if (!$area = dispatch_now(new GetArea($identifier))) {
                         return null;
                     }
 
                     return $area->getBlocks();
-                }, ['is_safe' => ['html']]
+                },
+                ['is_safe' => ['html']]
             ),
         ];
     }

@@ -16,7 +16,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class UpdateBlocks
 {
 
-    use DispatchesJobs;
+
 
     /**
      * The block type instance.

@@ -12,7 +12,6 @@ use Anomaly\SelectFieldType\SelectFieldType;
  */
 class BackgroundPositionFieldType extends SelectFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -59,5 +58,4 @@ class BackgroundPositionFieldType extends SelectFieldType
 
         return $config;
     }
-
 }

@@ -57,5 +57,4 @@ class AnomalyModuleBlocksCreateTypesStream extends Migration
             'required' => true,
         ],
     ];
-
 }

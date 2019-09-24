@@ -15,7 +15,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class MakeBlock
 {
 
-    use DispatchesJobs;
+
 
     /**
      * The block instance.

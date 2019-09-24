@@ -20,5 +20,4 @@ class BlocksModuleSeeder extends Seeder
     {
         $this->call(AreaSeeder::class);
     }
-
 }

@@ -87,7 +87,7 @@ class BlocksModuleServiceProvider extends AddonServiceProvider
     public function boot()
     {
         if (class_exists(BlocksTypesEntryModel::class)) {
-            $this->dispatch(new RegisterBlocks());
+            dispatch_now(new RegisterBlocks());
         }
     }
 
@@ -139,5 +139,4 @@ class BlocksModuleServiceProvider extends AddonServiceProvider
         $fields->route($this->addon, FieldsController::class);
         $assignments->route($this->addon, AssignmentsController::class, 'admin/blocks/types');
     }
-
 }

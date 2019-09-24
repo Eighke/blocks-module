@@ -13,7 +13,6 @@ use Anomaly\TextFieldType\TextFieldType;
  */
 class PaddingFieldType extends IntegerFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -112,5 +111,4 @@ class PaddingFieldType extends IntegerFieldType
             ],
         ];
     }
-
 }

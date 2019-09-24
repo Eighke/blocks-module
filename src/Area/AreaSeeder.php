@@ -1,6 +1,5 @@
 <?php namespace Anomaly\BlocksModule\Area;
 
-use Anomaly\BlocksModule\Area\AreaRepository;
 use Anomaly\Streams\Platform\Database\Seeder\Seeder;
 
 /**

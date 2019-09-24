@@ -12,7 +12,6 @@ use Anomaly\TextFieldType\TextFieldType;
  */
 class MarginFieldType extends TextFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -101,5 +100,4 @@ class MarginFieldType extends TextFieldType
             ],
         ];
     }
-
 }

@@ -2,7 +2,6 @@
 
 use Anomaly\BlocksModule\Block\Contract\BlockInterface;
 use Anomaly\Streams\Platform\Entry\EntryCollection;
-use Illuminate\Foundation\Bus\DispatchesJobs;
 
 /**
  * Class BlockCollection
@@ -14,7 +13,6 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class BlockCollection extends EntryCollection
 {
 
-    use DispatchesJobs;
 
     /**
      * Return if the collection has a
@@ -58,6 +56,16 @@ class BlockCollection extends EntryCollection
     }
 
     /**
+     * Return the string value.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->render();
+    }
+
+    /**
      * Render the blocks.
      *
      * @return string
@@ -72,15 +80,5 @@ class BlockCollection extends EntryCollection
                 }
             )->all()
         );
-    }
-
-    /**
-     * Return the string value.
-     *
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->render();
     }
 }

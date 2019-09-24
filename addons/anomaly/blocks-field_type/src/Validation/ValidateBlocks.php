@@ -15,7 +15,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class ValidateBlocks
 {
 
-    use DispatchesJobs;
+
 
     /**
      * Handle the command.
@@ -26,7 +26,7 @@ class ValidateBlocks
     public function handle(BlocksFieldType $fieldType)
     {
         /* @var MultipleFormBuilder $forms */
-        if (!$forms = $this->dispatch(new GetMultiformFromPost($fieldType))) {
+        if (!$forms = dispatch_now(new GetMultiformFromPost($fieldType))) {
             return true;
         }
 

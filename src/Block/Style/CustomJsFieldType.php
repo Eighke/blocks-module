@@ -12,7 +12,6 @@ use Anomaly\EditorFieldType\EditorFieldType;
  */
 class CustomJsFieldType extends EditorFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -35,5 +34,4 @@ class CustomJsFieldType extends EditorFieldType
 
         return $config;
     }
-
 }

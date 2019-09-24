@@ -12,7 +12,6 @@ use Anomaly\TextFieldType\TextFieldType;
  */
 class HeightFieldType extends TextFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -28,5 +27,4 @@ class HeightFieldType extends TextFieldType
      * @var string
      */
     protected $label = 'anomaly.module.blocks::style.height.label';
-
 }

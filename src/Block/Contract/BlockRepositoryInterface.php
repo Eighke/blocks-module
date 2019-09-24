@@ -32,5 +32,4 @@ interface BlockRepositoryInterface extends EntryRepositoryInterface
      * @return
      */
     public function sync(EntryInterface $area, FieldInterface $field, array $ids);
-
 }

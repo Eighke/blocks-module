@@ -12,7 +12,6 @@ use Anomaly\BooleanFieldType\BooleanFieldType;
  */
 class DividerFlipHorizontallyFieldType extends BooleanFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -21,5 +20,4 @@ class DividerFlipHorizontallyFieldType extends BooleanFieldType
      * @var string
      */
     protected $label = 'anomaly.module.blocks::style.divider_flip_horizontally.label';
-
 }

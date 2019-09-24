@@ -13,7 +13,6 @@ use Anomaly\TextFieldType\TextFieldType;
  */
 class BorderRadiusFieldType extends IntegerFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -114,5 +113,4 @@ class BorderRadiusFieldType extends IntegerFieldType
             ],
         ];
     }
-
 }

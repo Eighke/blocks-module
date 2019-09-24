@@ -12,7 +12,6 @@ use Anomaly\SliderFieldType\SliderFieldType;
  */
 class TransitionDurationFieldType extends SliderFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -41,5 +40,4 @@ class TransitionDurationFieldType extends SliderFieldType
      * @var string
      */
     protected $label = 'anomaly.module.blocks::style.transition_duration.label';
-
 }

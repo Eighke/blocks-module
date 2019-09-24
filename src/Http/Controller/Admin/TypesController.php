@@ -47,5 +47,4 @@ class TypesController extends AdminController
     {
         return $form->render($id);
     }
-
 }

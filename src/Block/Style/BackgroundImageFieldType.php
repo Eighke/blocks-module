@@ -14,7 +14,6 @@ use Anomaly\FilesModule\File\Contract\FileInterface;
  */
 class BackgroundImageFieldType extends FileFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -42,11 +41,10 @@ class BackgroundImageFieldType extends FileFieldType
         $value = $default;
 
         /* @var FileInterface $file */
-        if ($file = $this->dispatch(new GetFile(parent::getValue()))) {
+        if ($file = dispatch_now(new GetFile(parent::getValue()))) {
             $value = 'url(' . $file->make()->path() . ')';
         }
 
         return 'background-image: ' . $value . ';';
     }
-
 }

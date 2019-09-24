@@ -55,5 +55,4 @@ class AnomalyModuleBlocksAddDisplayTitleFieldToBlocks extends Migration
     protected $assignments = [
         'display_title',
     ];
-
 }

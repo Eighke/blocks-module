@@ -82,7 +82,12 @@ class BlocksModel extends Model implements PresentableInterface
          */
         if (!class_exists($this->entry_type)) {
             return new MorphTo(
-                $this->newQuery(), $this, -1, null, $type, $name
+                $this->newQuery(),
+                $this,
+                -1,
+                null,
+                $type,
+                $name
             );
         }
 

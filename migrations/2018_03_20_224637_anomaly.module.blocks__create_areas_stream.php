@@ -45,5 +45,4 @@ class AnomalyModuleBlocksCreateAreasStream extends Migration
         ],
         'blocks',
     ];
-
 }

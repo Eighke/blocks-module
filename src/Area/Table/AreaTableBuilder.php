@@ -60,5 +60,4 @@ class AreaTableBuilder extends TableBuilder
     protected $actions = [
         'delete',
     ];
-
 }

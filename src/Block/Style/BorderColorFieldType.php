@@ -12,7 +12,6 @@ use Anomaly\ColorpickerFieldType\ColorpickerFieldType;
  */
 class BorderColorFieldType extends ColorpickerFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -55,5 +54,4 @@ class BorderColorFieldType extends ColorpickerFieldType
             ],
         ];
     }
-
 }

@@ -45,7 +45,7 @@ class AreasController extends AdminController
      */
     public function choose(AreaRepositoryInterface $areas)
     {
-        return $this->view->make(
+        return view(
             'anomaly.module.blocks::admin/areas/choose',
             [
                 'areas' => $areas->all(),

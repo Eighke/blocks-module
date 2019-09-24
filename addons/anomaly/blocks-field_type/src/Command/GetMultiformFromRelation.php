@@ -6,7 +6,7 @@ use Anomaly\ConfigurationModule\Configuration\Form\ConfigurationFormBuilder;
 use Anomaly\Streams\Platform\Entry\EntryCollection;
 use Anomaly\Streams\Platform\Field\Contract\FieldInterface;
 use Anomaly\Streams\Platform\Field\Contract\FieldRepositoryInterface;
-use Anomaly\Streams\Platform\Support\Decorator;
+
 use Anomaly\Streams\Platform\Ui\Form\Multiple\MultipleFormBuilder;
 
 /**
@@ -55,7 +55,6 @@ class GetMultiformFromRelation
 
         /* @var BlockInterface $entry */
         foreach ($value as $instance => $entry) {
-
             $entry     = $decorator->undecorate($entry);
             $extension = $decorator->undecorate($entry->extension());
 

@@ -12,7 +12,6 @@ use Anomaly\SelectFieldType\SelectFieldType;
  */
 class TransitionSpeedCurveFieldType extends SelectFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -41,5 +40,4 @@ class TransitionSpeedCurveFieldType extends SelectFieldType
         'ease-out'    => 'anomaly.module.blocks::style.transition_speed_curve.option.ease-out',
         'ease-in-out' => 'anomaly.module.blocks::style.transition_speed_curve.option.ease-in-out',
     ];
-
 }

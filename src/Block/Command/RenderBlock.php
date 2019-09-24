@@ -15,7 +15,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 class RenderBlock
 {
 
-    use DispatchesJobs;
+
 
     /**
      * The block instance.

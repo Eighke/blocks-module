@@ -13,7 +13,6 @@ use Anomaly\TextFieldType\TextFieldType;
  */
 class CssIdFieldType extends TextFieldType
 {
-
     use ProvidesStyle;
 
     /**
@@ -22,5 +21,4 @@ class CssIdFieldType extends TextFieldType
      * @var string
      */
     protected $label = 'anomaly.module.blocks::style.css_id.label';
-
 }

@@ -64,5 +64,4 @@ class AreaFormBuilder extends FormBuilder
      * @var array
      */
     protected $assets = [];
-
 }
