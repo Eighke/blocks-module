@@ -3,7 +3,6 @@
 use Anomaly\BlocksModule\Block\BlockExtension;
 use Anomaly\BlocksModule\Block\Form\BlockInstanceFormBuilder;
 use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
-use Illuminate\Contracts\Container\Container;
 
 /**
  * Class AddStreamForm
@@ -33,7 +32,7 @@ class AddStreamForm
      * Create a new GetBlockStream instance.
      *
      * @param BlockInstanceFormBuilder $builder
-     * @param BlockExtension           $extension
+     * @param BlockExtension $extension
      */
     public function __construct(BlockInstanceFormBuilder $builder, BlockExtension $extension)
     {
@@ -43,17 +42,15 @@ class AddStreamForm
 
     /**
      * Handle the command.
-     *
-     * @param Container $container
      */
-    public function handle(Container $container)
+    public function handle()
     {
         if (!$stream = $this->extension->stream()) {
             return;
         }
 
         /* @var FormBuilder $form */
-        $form = $container->make($this->extension->getForm());
+        $form = app($this->extension->getForm());
 
         $form->setOption('locking_enabled', false);
         $form->setModel($this->extension->getModel());
